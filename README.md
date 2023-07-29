@@ -1,5 +1,6 @@
 # Air Fryer Recipes
 
+!['Demo For Site']("https://github.com/Calesi19/Air-Fryer-Recipes/blob/main/demo.gif?raw=true")
 
 ## Purpose
 
