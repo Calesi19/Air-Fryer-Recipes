@@ -1,6 +1,6 @@
 # Air Fryer Recipes
 
-!['Demo For Site'](https://github.com/Calesi19/Air-Fryer-Recipes/blob/main/docs/demo.gif?raw=true)
+!['Demo For Site'](https://github.com/Calesi19/Air-Fryer-Recipes/blob/main/docs/banner.gif?raw=true)
 
 ## Purpose
 
