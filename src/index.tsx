@@ -6,8 +6,8 @@ import {
   prerender as ssr,
 } from "preact-iso";
 
-import { Header } from "./components/Header.js";
-import { Home } from "./pages/Home/index.js";
+import { Header } from "./components/layout/Header.js";
+import Home from "./pages/Home/index.js";
 import { NotFound } from "./pages/_404.js";
 import "./style.scss";
 
