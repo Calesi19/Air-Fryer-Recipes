@@ -25,12 +25,12 @@ export default function RecipeCard({ recipe }: { recipe: Recipe }) {
         <section>
           <img src={recipe.image} alt="Hello" />
         </section>
-        <h2>{recipe.name}</h2>
-
-        <p>
-          Cook at {recipe.temperature} for {recipe.time} minutes
-        </p>
-
+        <hgroup>
+          <h2>{recipe.name}</h2>
+          <p>
+            Cook at {recipe.temperature} for {recipe.time} minutes
+          </p>
+        </hgroup>
         <footer>
           <details>
             <summary>Ingredients</summary>
@@ -51,10 +51,7 @@ export default function RecipeCard({ recipe }: { recipe: Recipe }) {
               ))}
             </ol>
           </details>
-          <div className="grid">
-            
-            
-          </div>
+          <div className="grid"></div>
         </footer>
       </article>
     </section>

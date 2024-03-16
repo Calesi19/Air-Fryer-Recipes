@@ -1,6 +1,5 @@
-import React, { useState, useEffect } from "react";
+import { useState, useEffect } from "react";
 import RecipeCard from "../../components/RecipeCard/Card";
-import "./style.css";
 
 type Recipe = {
   id: string;
@@ -12,8 +11,6 @@ type Recipe = {
   instructions: string[];
   video: string;
 };
-
-// Removed the Salmon object since it's not used
 
 export default function Home() {
   const [isLoading, setIsLoading] = useState(true);
@@ -42,15 +39,10 @@ export default function Home() {
     <section>
       {isLoading ? (
         <section>
-          <article aria-busy="true"></article>
-          <article aria-busy="true"></article>
-          <article aria-busy="true"></article>
-          <article aria-busy="true"></article>
-          <article aria-busy="true"></article>
-          <article aria-busy="true"></article>
+          <span aria-busy="true">Loading...</span>
         </section>
       ) : (
-        <div>
+        <div className="recipe-grid">
           {recipes.map((recipe) => (
             <div key={recipe.id}>
               <RecipeCard recipe={recipe} />

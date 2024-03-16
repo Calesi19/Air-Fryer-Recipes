@@ -1,16 +1,15 @@
-import { useLocation } from "preact-iso";
 import { GrEdit } from "react-icons/gr";
 
 export function Header() {
-  const { url } = useLocation();
-
   return (
     <header className="container">
       <section className="container">
         <nav>
           <ul>
             <li>
-              <strong>Recipes</strong>
+              <a href="/" className="contrast">
+                <strong>Recipes</strong>
+              </a>
             </li>
           </ul>
           <ul>
