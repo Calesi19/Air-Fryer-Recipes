@@ -13,50 +13,50 @@ type Recipe = {
   video: string;
 };
 
-const Salmon: Recipe = {
-  id: "1",
-  name: "Salmon",
-  temperature: "400",
-  time: "20",
-  image:
-    "https://evuecezehrh.exactdn.com/wp-content/uploads/2020/08/best-damn-air-fryer-salmon1.jpg",
-  ingredients: ["Salmon", "Salt", "Pepper"],
-  instructions: ["Step 1", "Step 2"],
-  video: "https://www.youtube.com/watch?v=9sYEl9wJ6w4",
-};
+// Removed the Salmon object since it's not used
 
 export default function Home() {
   const [isLoading, setIsLoading] = useState(true);
   const [recipes, setRecipes] = useState<Recipe[]>([]);
 
-  // Fetch recipes
-
   useEffect(() => {
     (async () => {
-      const response = await fetch(
-        "https://us-central1-airfryerrecipes-bf3ea.cloudfunctions.net/fetchRecipes"
-      );
-		
-		const data = await response.json();
-		console.log(data);
-      setRecipes(data);
-      setIsLoading(false);
+      try {
+        const response = await fetch(
+          "https://us-central1-airfryerrecipes-bf3ea.cloudfunctions.net/fetchRecipes"
+        );
+        if (!response.ok) {
+          throw new Error(`HTTP error! Status: ${response.status}`);
+        }
+        const data = await response.json();
+        setRecipes(data.recipes);
+      } catch (error) {
+        console.error("Failed to fetch recipes:", error);
+      } finally {
+        setIsLoading(false);
+      }
     })();
   }, []);
 
   return (
     <section>
-      <h1>Recipes</h1>
       {isLoading ? (
-        <p>Loading...</p>
+        <section>
+          <article aria-busy="true"></article>
+          <article aria-busy="true"></article>
+          <article aria-busy="true"></article>
+          <article aria-busy="true"></article>
+          <article aria-busy="true"></article>
+          <article aria-busy="true"></article>
+        </section>
       ) : (
-        <ul>
+        <div>
           {recipes.map((recipe) => (
-            <li key={recipe.id}>
+            <div key={recipe.id}>
               <RecipeCard recipe={recipe} />
-            </li>
+            </div>
           ))}
-        </ul>
+        </div>
       )}
     </section>
   );

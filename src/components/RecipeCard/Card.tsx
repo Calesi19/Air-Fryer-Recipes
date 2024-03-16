@@ -53,7 +53,7 @@ export default function RecipeCard({ recipe }: { recipe: Recipe }) {
           </details>
           <div className="grid">
             
-            <button className="outline secondary">Edit</button>
+            
           </div>
         </footer>
       </article>

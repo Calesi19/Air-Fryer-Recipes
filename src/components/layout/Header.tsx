@@ -1,5 +1,5 @@
 import { useLocation } from "preact-iso";
-import { FaPlus } from "react-icons/fa";
+import { GrEdit } from "react-icons/gr";
 
 export function Header() {
   const { url } = useLocation();
@@ -7,22 +7,20 @@ export function Header() {
   return (
     <header className="container">
       <section className="container">
-        
-          <nav>
-            <ul>
-              <li>
-                <strong>Recipes</strong>
-              </li>
-            </ul>
-            <ul>
-              <li>
-                <button>
-                  <FaPlus />
-                </button>
-              </li>
-            </ul>
-          </nav>
-        
+        <nav>
+          <ul>
+            <li>
+              <strong>Recipes</strong>
+            </li>
+          </ul>
+          <ul>
+            <li>
+              <button>
+                <GrEdit />
+              </button>
+            </li>
+          </ul>
+        </nav>
       </section>
     </header>
   );

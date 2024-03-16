@@ -18,11 +18,11 @@ def fetch_recipes(request):
     recipes = []
     for doc in docs:
         recipes.append(doc.to_dict())
-
+    
     # Create a response object and set CORS headers
     response = make_response({'recipes': recipes})
-    response.headers['Access-Control-Allow-Origin'] = '*'
-    response.headers['Access-Control-Allow-Methods'] = 'GET, OPTIONS'
-    response.headers['Access-Control-Allow-Headers'] = 'Content-Type'
+    response.headers.add('Access-Control-Allow-Origin', '*')
+    response.headers.add('Access-Control-Allow-Headers', 'Content-Type,Authorization')
+    response.headers.add('Access-Control-Allow-Methods', 'GET,PUT,POST,DELETE')
 
-    return {'recipes': recipes}
+    return response
