@@ -28,7 +28,7 @@ export default function RecipeCard({ recipe }: { recipe: Recipe }) {
         <hgroup>
           <h2>{recipe.name}</h2>
           <p>
-            Cook at {recipe.temperature} for {recipe.time} minutes
+            Airfry at {recipe.temperature} for {recipe.time} minutes
           </p>
         </hgroup>
         <footer>
