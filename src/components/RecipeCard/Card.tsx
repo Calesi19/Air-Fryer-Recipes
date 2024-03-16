@@ -1,6 +1,3 @@
-import "./style.css";
-import { useState } from "preact/hooks";
-
 type Recipe = {
   id: string;
   name: string;
@@ -13,12 +10,6 @@ type Recipe = {
 };
 
 export default function RecipeCard({ recipe }: { recipe: Recipe }) {
-  const [showDetails, setShowDetails] = useState(false);
-
-  const handleToggleDetails = () => {
-    setShowDetails(!showDetails);
-  };
-
   return (
     <section>
       <article>
