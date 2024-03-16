@@ -50,8 +50,14 @@ export default function RecipeCard({ recipe }: { recipe: Recipe }) {
                 <li key={`${recipe.id}-instruction-${index}`}>{instruction}</li>
               ))}
             </ol>
+            {recipe.video && (
+              <a href={recipe.video}>
+                <div className="grid">
+                  <button className="outline">Watch Video</button>
+                </div>
+              </a>
+            )}
           </details>
-          <div className="grid"></div>
         </footer>
       </article>
     </section>
