@@ -1,18 +1,30 @@
-import { useLocation } from 'preact-iso';
+import { useLocation } from "preact-iso";
+import { FaPlus } from "react-icons/fa";
 
 export function Header() {
-	const { url } = useLocation();
+  const { url } = useLocation();
 
-	return (
-		<header>
-			<nav>
-				<a href="/" class={url == '/' && 'active'}>
-					Home
-				</a>
-				<a href="/404" class={url == '/404' && 'active'}>
-					404
-				</a>
-			</nav>
-		</header>
-	);
+  return (
+    <header>
+      <section>
+        <nav className="container grid">
+          <a href="/" class={url == "/" && "active"}>
+            <h1>Home</h1>
+          </a>
+          <a href="/" class={url == "/" && "active"}>
+            <h1>Home</h1>
+          </a>
+          <a href="/" class={url == "/" && "active"}>
+            <h1>Home</h1>
+          </a>
+          <a href="/" class={url == "/" && "active"}>
+            <button>
+              <FaPlus />
+              Add
+            </button>
+          </a>
+        </nav>
+      </section>
+    </header>
+  );
 }
