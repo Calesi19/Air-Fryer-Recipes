@@ -14,9 +14,9 @@ export function Header() {
           </ul>
           <ul>
             <li>
-              <button>
-                <GrEdit />
-              </button>
+              {/* <button> */}
+              {/*   <GrEdit /> */}
+              {/* </button> */}
             </li>
           </ul>
         </nav>
